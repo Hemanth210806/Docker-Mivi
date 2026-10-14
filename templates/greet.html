@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mevi | Greeting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MEVI</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/health">Health</a>
+            <a href="/greet">Greeting</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="content-box">
+            <h1>Personalized Greeting</h1>
+            <p>Enter your name to receive a greeting.</p>
+
+            <form id="greetForm">
+                <label for="name">Your name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <button class="btn" type="submit">Say Hello</button>
+            </form>
+
+            <h2 id="result" style="margin-top: 25px;"></h2>
+        </div>
+    </main>
+
+    <footer>© 2026 Mevi Flask Demo</footer>
+
+    <script>
+        document.getElementById("greetForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            if (!name) return;
+
+            const response = await fetch("/api/greet/" + encodeURIComponent(name));
+            const data = await response.json();
+
+            document.getElementById("result").textContent = data.message;
+        });
+    </script>
+</body>
+</html>

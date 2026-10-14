@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mevi | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MEVI</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/health">Health</a>
+            <a href="/greet">Greeting</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Welcome to Mevi</h1>
+            <p>A simple Flask web application with five routes.</p>
+            <a href="/about" class="btn">Explore Application</a>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <h2>Health Check</h2>
+                <p>Check whether the application is running.</p>
+                <a href="/health" class="btn">Check Health</a>
+            </div>
+
+            <div class="card">
+                <h2>Greeting</h2>
+                <p>Get a personalized greeting.</p>
+                <a href="/greet" class="btn">Say Hello</a>
+            </div>
+
+            <div class="card">
+                <h2>About Mevi</h2>
+                <p>Learn more about this application.</p>
+                <a href="/about" class="btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>© 2026 Mevi Flask Demo</footer>
+</body>
+</html>

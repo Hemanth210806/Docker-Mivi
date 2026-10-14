@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mevi | About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MEVI</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/health">Health</a>
+            <a href="/greet">Greeting</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="content-box">
+            <h1>About Mevi</h1>
+            <p>Mevi is a demonstration web application built using Flask, HTML and CSS.</p>
+
+            <div class="cards">
+                <div class="card">
+                    <h2>Backend</h2>
+                    <p>Python and Flask handle requests and routes.</p>
+                </div>
+                <div class="card">
+                    <h2>Frontend</h2>
+                    <p>HTML structures the pages, while CSS styles them.</p>
+                </div>
+                <div class="card">
+                    <h2>API</h2>
+                    <p>JSON endpoints provide application data.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>© 2026 Mevi Flask Demo</footer>
+</body>
+</html>

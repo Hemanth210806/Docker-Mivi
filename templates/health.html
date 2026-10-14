@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mevi | Health</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MEVI</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/health">Health</a>
+            <a href="/greet">Greeting</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="content-box">
+            <h1>Application Health</h1>
+            <p class="status">● Application is running</p>
+            <p>Application: Mevi Flask Demo</p>
+            <p>Endpoint: /health</p>
+            <br>
+            <a href="/health" class="btn">Refresh Status</a>
+        </div>
+    </main>
+
+    <footer>© 2026 Mevi Flask Demo</footer>
+</body>
+</html>
